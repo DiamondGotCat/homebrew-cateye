@@ -4,7 +4,7 @@ class Cateye < Formula
   url "https://raw.githubusercontent.com/DiamondGotCat/homebrew-cateye/master/Formula/cateye"
   sha256 "14213ad518f7db47c953a1651b6053dba3e17de8123e257ac335b33acac87906"
   depends_on "jq"
-  version "1.1.3"
+  version "1.1.4"
   # depends_on "dependency" => :optional
 
   def install
