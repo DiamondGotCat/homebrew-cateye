@@ -28,7 +28,7 @@ download_and_install() {
     curl -LO "$url" || { echo "[!] Failed to download dependencies: $url"; exit 1; }
     tar -xzf "$filename" || { echo "Failed to extract $filename"; exit 1; }
     # Assuming the extracted folder contains binaries to add to system bin directory
-    sudo cp -r "./$package_name/." /usr/local/bin/
+    sudo cp -r "./$package_name/$package_name" "/usr/local/bin/$package_name"
     echo "[+] installed dependencies: $filename"
 }
 
@@ -39,7 +39,7 @@ download_and_installi() {
     curl -LO "$url" || { echo "Failed to download $url"; exit 1; }
     tar -xzf "$filename" || { echo "Failed to extract $filename"; exit 1; }
     # Assuming the extracted folder contains binaries to add to system bin directory
-    sudo cp -r "./$package_name/." /usr/local/bin/
+    sudo cp -r "./$package_name/$package_name" "/usr/local/bin/$package_name"
     echo "[+] installed: $package_name"
 }
 
