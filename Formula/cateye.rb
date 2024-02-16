@@ -1,4 +1,4 @@
-class cateye < Formula
+class Cateye < Formula
   desc "Download tool from Kamu Dev and Install."
   homepage "https://www.github.com/DiamondGotCat/cateye/"
   url "https://raw.githubusercontent.com/DiamondGotCat/cateye/master/Formula/cateye"
