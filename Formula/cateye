@@ -24,12 +24,26 @@ package_name=$2
 download_and_install() {
     url=$1
     filename=$(basename "$url")
+    echo "[-] install dependencies: $filename"
+    curl -LO "$url" || { echo "[!] Failed to download dependencies: $url"; exit 1; }
+    tar -xzf "$filename" || { echo "Failed to extract $filename"; exit 1; }
+    # Assuming the extracted folder contains binaries to add to system bin directory
+    cp -r "$package_name/bin/." /usr/local/bin/
+    echo "[+] installed dependencies: $filename"
+}
+
+download_and_installi() {
+    echo "[-] install"
+    url=$1
+    filename=$(basename "$url")
     curl -LO "$url" || { echo "Failed to download $url"; exit 1; }
     tar -xzf "$filename" || { echo "Failed to extract $filename"; exit 1; }
     # Assuming the extracted folder contains binaries to add to system bin directory
     cp -r "$package_name/bin/." /usr/local/bin/
-    echo "$package_name binaries added to system bin directory"
+    echo "[+] installed: $package_name"
 }
+
+echo "Download and Install Start =>"
 
 # Step 2: Connect to server and retrieve pkg.json
 json_url="https://dl.kamu.jp/$package_name/pkg.json"
@@ -38,11 +52,13 @@ pkg_json=$(curl -sS "$json_url") || { echo "Failed to retrieve pkg.json from $js
 # Step 3: Download and add dependencies to system bin directory
 dependencies=$(echo "$pkg_json" | jq -r '.dependencies | to_entries[] | .value')
 for url in $dependencies; do
+    echo "Download and Install dependencies: $url"
     download_and_install "$url"
 done
 
 # Step 4: Download and add main package to system bin directory
 main_url=$(echo "$pkg_json" | jq -r '.url')
-download_and_install "$main_url"
+echo "Download and Install: $main_url"
+download_and_installi "$main_url"
 
-echo "Installation of $package_name completed successfully"
+echo "[+] Installation of $package_name and that dependencies completed successfully"
