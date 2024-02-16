@@ -29,6 +29,7 @@ download_and_install() {
     tar -xzf "$filename" || { echo "Failed to extract $filename"; exit 1; }
     # Assuming the extracted folder contains binaries to add to system bin directory
     sudo cp -r "./$package_name/$package_name" "/usr/local/bin/$package_name"
+    chmod 777 "/usr/local/bin/$package_name"
     echo "[+] installed dependencies: $filename"
 }
 
@@ -40,6 +41,7 @@ download_and_installi() {
     tar -xzf "$filename" || { echo "Failed to extract $filename"; exit 1; }
     # Assuming the extracted folder contains binaries to add to system bin directory
     sudo cp -r "./$package_name/$package_name" "/usr/local/bin/$package_name"
+    chmod 777 "/usr/local/bin/$package_name"
     echo "[+] installed: $package_name"
 }
 
