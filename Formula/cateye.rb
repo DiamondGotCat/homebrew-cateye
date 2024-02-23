@@ -2,7 +2,7 @@ class Cateye < Formula
   desc "Download tool from Kamu Dev and Install."
   homepage "https://www.github.com/DiamondGotCat/cateye/"
   # url "https://raw.githubusercontent.com/DiamondGotCat/homebrew-cateye/master/Formula/cateye"
-  url "https://dl.kamu.jp/cateye/cateye-homebrew"
+  url "https://dl.kamu.jp/cateye/cateye-homebrew/cateye"
   sha256 "1992c84c5210eeb8d3a1772d5495ae683cc9cc2bd071be4aa278ef416cd6248a"
   depends_on "jq"
   version "1.3"
