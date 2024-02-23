@@ -5,7 +5,7 @@ class Cateye < Formula
   url "https://dl.kamu.jp/cateye/cateye-homebrew/cateye"
   sha256 "d01b82fb675e3c09ad7790b4920ffbd6a710c58bc596c1986250d0ed8a9c0d70"
   depends_on "jq"
-  version "1.5"
+  version "1.7"
   # depends_on "dependency" => :optional
 
   def install
