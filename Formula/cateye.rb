@@ -3,7 +3,7 @@ class Cateye < Formula
   homepage "https://www.github.com/DiamondGotCat/cateye/"
   # url "https://raw.githubusercontent.com/DiamondGotCat/homebrew-cateye/master/Formula/cateye"
   url "https://dl.kamu.jp/cateye/cateye-homebrew/cateye"
-  sha256 "7e2ba2f059b888624eadffd0b05fa25097d1da244b781f094dbf55712e1faba6"
+  sha256 "af3e0c6455698f8c451d0515aeab6aa0c41334bf4bf0bb603a0232336af4f40b"
   depends_on "jq"
   version "1.5"
   # depends_on "dependency" => :optional
