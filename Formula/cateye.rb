@@ -5,7 +5,7 @@ class Cateye < Formula
   url "https://dl.kamu.jp/cateye/cateye"
   sha256 "fbaaff7897881026d35883ff3a9693afebfa9d9dde068e7b433a06574a441de4"
   depends_on "jq"
-  version "1.1.5"
+  version "1.2"
   # depends_on "dependency" => :optional
 
   def install
