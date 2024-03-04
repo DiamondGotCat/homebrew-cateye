@@ -1,10 +1,10 @@
 class Cateye < Formula
   desc "Download tool from Kamu Dev and Install."
   homepage "https://www.github.com/DiamondGotCat/cateye/"
-  url "https://dl.kamu.jp/cateye/cateye-homebrew/cateye"
-  sha256 "800041326c4f7dd967fa5609de16868ce174a815f0bd2800dad2efa8fa82b0f1"
+  url "https://dl.kamu.jp/cateye/cateye"
+  sha256 "1bd69b70cea92d6cd0ac3c86ffda22a0ad0fc45a3588b2c4150ad6802619175b"
   depends_on "jq"
-  version "4.0.1"
+  version "7.0.3"
 
   def install
     bin.install "cateye"
