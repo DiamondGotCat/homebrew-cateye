@@ -2,9 +2,9 @@ class Cateye < Formula
   desc "Download and Install Open-source Software"
   homepage "https://www.github.com/DiamondGotCat/cateye/"
   url "https://dl.kamu.jp/cateye/cateye"
-  sha256 "bc8a8ea144c7299377d316119994dead0b8a7989a258feb0598ed132f8a040c3"
+  sha256 "8ab45d687b3c64d88aa38d1b3e8bdcaaca3072e0db43d617c12d5800cfcf64d1"
   depends_on "jq"
-  version "8.0.1"
+  version "8.3.0"
 
   def install
     bin.install "cateye"
