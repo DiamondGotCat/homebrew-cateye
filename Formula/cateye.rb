@@ -4,7 +4,7 @@ class Cateye < Formula
   url "https://kamu.jp/files/cateye"
   sha256 "14e7b5218e2f068a42483b262ef363a1cd9daba7ecc0e8fd208f2a08c1a230ba"
   depends_on "jq"
-  version "8.4.0"
+  version "8.5.0"
 
   def install
     bin.install "cateye"
