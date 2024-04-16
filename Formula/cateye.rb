@@ -7,6 +7,7 @@ class Cateye < Formula
   version "8.6.4"
 
   def install
+    mv "cateye-brew" "cateye"
     bin.install "cateye"
   end
 
