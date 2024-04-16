@@ -2,7 +2,7 @@ class Cateye < Formula
   desc "Download and Install Open-source Software"
   homepage "https://github.com/DiamondGotCat/cateye/"
   url "https://kamu.jp/files/cateye-brew"
-  sha256 "a3770c974c9551ab6260c7dc0f90dce89a67803bb68ddecf42c7a261a2cc6770"
+  sha256 "9c1efbf2ec2dc923bde6aab667f25a2810d7d086950e7dca600f7cbc6570fb24"
   depends_on "jq"
   version "8.6.4"
 
